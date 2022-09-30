@@ -9,7 +9,7 @@ public class Snake_and_Ladder {
 		int snake=2;
 			while(i<=100)
 			{
-				int roll = (int) Math.floor((Math.random() * 10) % 3);
+				int roll = (int ) Math.floor((Math.random() * 10) % 3);
 				int value = (int) Math.floor((Math.random() * 10) % 6)+1;
 				System.out.println("Dice Roll =" + value);
 				
@@ -19,9 +19,17 @@ public class Snake_and_Ladder {
 					System.out.println("No Play" + i);
 				}
 				else if (roll == ladder) 
-				{	
-					i=i+value;
-					System.out.println("Ladder" + i);
+				{
+					     i=i+value;
+				         if(i == 100)
+			         	{
+				     	i=100;
+					     System.out.println("Ladder" +i);
+				        }
+			         	else
+			         	{
+					    System.out.println("Ladder" + i);
+			         	}
 				}
 	    	   else 
 	    	   {
@@ -35,7 +43,8 @@ public class Snake_and_Ladder {
 				     {
 				    	System.out.println("snake" + i);
 				     }
-	    	   } 
-	     }
+	    	   }
+		
+			}
 	}
 }
