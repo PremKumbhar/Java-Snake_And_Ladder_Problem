@@ -3,9 +3,9 @@ package com.bridgelabz;
 public class Snake_and_Ladder {
 	public static void main(String[] args) 
 	{
-		for (int i=0; i <= 100; i++)
+		int i = (int) (Math.floor(Math.random() * 10) % 6)+1;
 		{
-		  System.out.println("ladder value =" +i);
+		 System.out.println("player rolls die and gets value =" +i);
 		}
 	}
 }
